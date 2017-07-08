@@ -1,0 +1,32 @@
+ng new <AppName>
+
+npm install
+
+ng serve
+
+ng g c <ComponentName>  // ng generate component <ComponentName>
+
+
+Selector should be unique in component.ts
+
+
+PROCESS OF ANGULAR APP starting
+--> first main.ts 
+--> starts app 
+--> bootstraps App Module 
+--> bootstrap property App Compoent (All other app component related files) 
+--> selector in app component gets rendered in <app-root> element of index.html
+
+
+web bundler bundles other 3rd party js files and adds to bottom of index.html file which gets served
+
+
+selector can be used taking element tags simply in '<component name>' or as attributes in '[<component name>]' or as class in '.<component name>'
+selectors don't work for id of component or pseudo selectors like :hover and so on
+
+
+
+
+
+
+

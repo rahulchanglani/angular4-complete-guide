@@ -1,0 +1,55 @@
+<label for="text1">Server Name</label>
+<br>
+<i>String Interpolation</i>
+<p>{{ serverCreationStatus }}</p>
+<br>
+<i>Property Binding</i>
+<p [innerText]="serverCreationStatus"></p>
+<br>
+<i>Event listening with only value passing</i>
+<input
+    type="text"
+    class="form-control"
+    name="text1"
+    (input)="onUpdateServerName($event)">
+
+<br>
+<i>Two-way data binding using ngModel</i>
+<input
+    type="text"
+    class="form-control"
+    name="text1"    
+    [(ngModel)]="serverName">
+
+<br>
+<i>Two-way data binding using event and property binding</i>
+<input
+    type="text"
+    class="form-control"
+    name="text1"    
+    (input)="onUpdateServerName($event)"
+    [value]="serverName">
+
+<br>
+<code>{{serverName}}</code>
+<br>
+<br>
+<i>Event listening</i>
+<br>
+<button class="btn btn-primary" 
+        [disabled]="!allowNewServer"
+        (click)="onCreateServer()">Add Server</button>
+<br>
+<hr>
+<mark>dynamic property binding can be done with some normal dom element property/directive/component</mark>
+<br>
+<mark>There are no curly braces in quotes for property binding</mark>
+<br>
+<mark>
+To o/p in your template or print in template, use string manipulation
+To change some property (element, directive, compoennt) use property binding
+</mark>
+<br>
+<mark>
+Two way data binding requires FormsModule to be imported in app-module.ts form '@angular/forms'
+</mark>
