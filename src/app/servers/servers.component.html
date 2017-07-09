@@ -1,7 +1,19 @@
+<br><br>
+<b><app-server *ngFor="let server of servers"></app-server></b>
+<br><br>
 <label for="text1">Server Name</label>
 <br>
 <i>String Interpolation</i>
 <p>{{ serverCreationStatus }}</p>
+<br>
+<i>Directives</i>
+<p *ngIf="created; else noServer">Server {{serverName}} was created</p>
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template>
+#noServer is a marker which mark a certain spot in template
+<br>
+<br><code>Directives tell info about dom. ngIf is a structural directive. either adds or doesnt add it</code>
 <br>
 <i>Property Binding</i>
 <p [innerText]="serverCreationStatus"></p>
