@@ -1,4 +1,4 @@
-# Angular 4 Complete Guide App
+# Angular 4 app components, data binding, directives basics
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
